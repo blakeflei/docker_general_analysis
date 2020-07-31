@@ -197,7 +197,7 @@ RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
     fix-permissions "/home/${NB_USER}"
 
 ## Install PyCharm
-#ARG PYCHARM_SOURCE=https://download.jetbrains.com/python/pycharm-community-anaconda-2020.2.tar.gz
+ARG PYCHARM_SOURCE=https://download.jetbrains.com/python/pycharm-community-anaconda-2020.2.tar.gz
 USER root
 WORKDIR /opt/pycharm
 RUN curl -fsSL $PYCHARM_SOURCE -o /opt/pycharm/installer.tgz && \
